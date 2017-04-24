@@ -13,10 +13,7 @@ object Problem7 extends App {
       else if (numberIsPrime) iterate(currentNumber + 1, currentIndex + 1)
       else iterate(currentNumber + 1, currentIndex)
     }
-
     iterate()
   }
-
   println(findNthPrime(10001))
-
 }
