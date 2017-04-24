@@ -1,5 +1,7 @@
 package main
 
+import scala.annotation.tailrec
+
 object Problem4 extends App {
   def isPalindrome(num: Int): Boolean = {
     val productArray = num.toString.toArray
@@ -7,6 +9,7 @@ object Problem4 extends App {
     split._1.sameElements(split._2.reverse)
   }
 
+  @tailrec
   def largestPalindromeProduct(p1: Int = 999, p2: Int = 999, largest: Int = 0): Int = {
     val prod = p1 * p2
     if (p1 == 100 && p2 == 100) largest
