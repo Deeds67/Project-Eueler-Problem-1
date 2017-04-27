@@ -1,9 +1,9 @@
 package main
+import Utils.PrimeUtility.isPrime
 
 import scala.annotation.tailrec
 
 object Problem7 extends App {
-  def isPrime(n: Long): Boolean = !(2 +: (3 to Math.sqrt(n).toInt by 2) exists (n%_ == 0))
 
   def findNthPrime(primeIndexToFind: Int): Int = {
     @tailrec
